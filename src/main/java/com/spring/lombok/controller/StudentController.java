@@ -1,6 +1,7 @@
 package com.spring.lombok.controller;
 
 import com.spring.lombok.model.Student;
+import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,11 +20,14 @@ public class StudentController {
    // public static final Logger LOGGER=  LoggerFactory.getLogger(Student.class);
 
     @GetMapping("/all")
-    public List<Student> getStudent(){
+    public List<Student> getStudent(Student student){
         log.info("inside getStudents function");
-    return create();
+    return create(null);
     }
-    public List<Student> create(){
+    public List<Student> create(@NonNull Student student){
+        /*if (student==null){
+            throw new NullPointerException("student makred @NotNull but is null");
+        }*/
         log.info("inside create function");
         List<Student> students=new ArrayList<>();
 
