@@ -9,6 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @ToString
+@EqualsAndHashCode
 public class Student {
 
     private Long id;
@@ -16,7 +17,7 @@ public class Student {
     private String address;
     private String age;
 
-    @Override
+   /* @Override
     public boolean equals(Object obj) {
         if (this==obj)return true;
         if (obj==null)return false;
@@ -29,7 +30,7 @@ public class Student {
     @Override
     public int hashCode() {
         return (int) (id * name.hashCode() * address.hashCode() * age.hashCode());
-    }
+    }*/
 
     /*@Override
     public String toString() {

@@ -1,8 +1,10 @@
 package com.spring.lombok.controller;
 
 import com.spring.lombok.model.Student;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,13 +13,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/student")
+@Slf4j
 public class StudentController {
+
+   // public static final Logger LOGGER=  LoggerFactory.getLogger(Student.class);
 
     @GetMapping("/all")
     public List<Student> getStudent(){
+        log.info("inside getStudents function");
     return create();
     }
     public List<Student> create(){
+        log.info("inside create function");
         List<Student> students=new ArrayList<>();
 
         Student student1=
@@ -43,9 +50,11 @@ public class StudentController {
 
         System.out.println("Res :"+ student4.equals(student5));
 
+
+/*
         System.out.println(student4.hashCode());
         System.out.println(student5.hashCode());
-
+*/
 
         Student student6=new Student();
 
@@ -55,6 +64,8 @@ public class StudentController {
         students.add(student4);
         students.add(student5);
         students.add(student6);
+
+        log.info(student1.toString());
 
 
         System.out.println(student1.toString());
