@@ -40,6 +40,13 @@ public class StudentController {
         student5.setId(1L);student5.setName("Eslam");
         student5.setAddress("add_1");student5.setAge("20");
 
+
+        System.out.println("Res :"+ student4.equals(student5));
+
+        System.out.println(student4.hashCode());
+        System.out.println(student5.hashCode());
+
+
         Student student6=new Student();
 
         students.add(student1);
