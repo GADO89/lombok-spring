@@ -20,9 +20,10 @@ public class StudentController {
     public List<Student> create(){
         List<Student> students=new ArrayList<>();
 
-        Student student1=new Student();
-        student1.setId(1L);student1.setName("Eslam");
-        student1.setAddress("add_1");student1.setAge("20");
+        Student student1=
+                Student.builder().id(1L).name("Osama").address("Cairo").age("30").build();
+        //student1.setId(1L);student1.setName("Eslam");
+        //student1.setAddress("add_1");student1.setAge("20");
 
         Student student2=new Student();
         student2.setId(1L);student2.setName("Eslam");
