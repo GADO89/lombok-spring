@@ -28,9 +28,8 @@ public class StudentController {
         student2.setId(1L);student2.setName("Eslam");
         student2.setAddress("add_1");student2.setAge("20");
 
-        Student student3=new Student();
-        student3.setId(1L);student3.setName("Eslam");
-        student3.setAddress("add_1");student3.setAge("20");
+        Student student3=new Student(12L,"Ahmed","add_2","22");
+
 
         Student student4=new Student();
         student4.setId(1L);student4.setName("Eslam");
@@ -40,11 +39,15 @@ public class StudentController {
         student5.setId(1L);student5.setName("Eslam");
         student5.setAddress("add_1");student5.setAge("20");
 
+        Student student6=new Student();
+
         students.add(student1);
         students.add(student2);
         students.add(student3);
         students.add(student4);
         students.add(student5);
+        students.add(student6);
+
 
         return students;
     }
