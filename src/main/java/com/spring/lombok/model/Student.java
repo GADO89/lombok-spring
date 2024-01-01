@@ -1,5 +1,7 @@
 package com.spring.lombok.model;
 
+
+//change repository name
 public class Student {
 
     private Long id;
